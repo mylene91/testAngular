@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
+// decorateur @Component
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mon-premier-projet';
+  title = 'premiers pas vers Angular !';
 }

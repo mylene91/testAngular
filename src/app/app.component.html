@@ -15,9 +15,14 @@
         <app-appareil></app-appareil>
         <app-appareil></app-appareil>
       </ul>
+      <!-- [disabled]="isAuth" : ce boutton sera desactivé si la variable isAuth est false, si l'utilisateur est authéntifié il pourra dans ce cas tout allumer -->
+      <button class="btn btn-success"
+              [disabled]="!isAuth"
+              (click)="onAllumer()">Tout allumer</button>
     </div>
   </div>
 </div>
+
 
 
 <router-outlet></router-outlet>

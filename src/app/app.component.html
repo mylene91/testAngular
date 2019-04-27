@@ -11,9 +11,16 @@
     <div class="col-12">
       <h2> Mes appareils :</h2>
       <ul class="list-group">
+        <!-- avec une boucle ou plutôt une directive structurelle *ngFor : je kiffe les boucles en Angular ! -->
+        <app-appareil *ngFor="let appareil of appareils"
+                      [appareilName]="appareil.name"
+                      [appareilStatus]="appareil.status"
+        ></app-appareil>
+        <!-- à l'ancienne :
         <app-appareil [appareilName]="appareilOne" [appareilStatus]="'éteint'"></app-appareil>
         <app-appareil [appareilName]="appareilTwo" [appareilStatus]="'allumé'"></app-appareil>
         <app-appareil [appareilName]="appareilThree" [appareilStatus]="'allumé'"></app-appareil>
+        -->
       </ul>
       <div>
         <div class="row">

@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // title = 'premiers pas vers Angular !';
-
   // est-ce que l'utilisateur est authentifié ? Par défaut false
   isAuth =  false;
+  appareilOne = 'Machine à laver';
+  appareilTwo = 'Télévision';
+  appareilThree = 'Ordinateur';
 
   constructor() {
     setTimeout(

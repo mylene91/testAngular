@@ -10,7 +10,7 @@ export class AppareilComponent implements OnInit {
   // appareilName = 'Machine à café';
   // décorateur @Input à importer aussi
   @Input() appareilName: string;
-  appareilStatus = 'éteint';
+  @Input() appareilStatus: string;
 
   constructor() { }
 

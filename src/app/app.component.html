@@ -11,9 +11,9 @@
     <div class="col-12">
       <h2> Mes appareils :</h2>
       <ul class="list-group">
-        <app-appareil appareilName="Machine à laver"></app-appareil>
-        <app-appareil appareilName="Télévision"></app-appareil>
-        <app-appareil appareilName="Ordinateur"></app-appareil>
+        <app-appareil [appareilName]="appareilOne" [appareilStatus]="'éteint'"></app-appareil>
+        <app-appareil [appareilName]="appareilTwo" [appareilStatus]="'allumé'"></app-appareil>
+        <app-appareil [appareilName]="appareilThree" [appareilStatus]="'allumé'"></app-appareil>
       </ul>
       <div>
         <div class="row">

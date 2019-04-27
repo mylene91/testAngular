@@ -1,6 +1,16 @@
 # MonPremierProjet
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+>Installer son evironnement de développement : 
+* La dernière version de NPM : `npm install -g npm@latest`
+* Installer CLI (Command Line Interface ; permet d'executer des scripts pour la création, structuration et production d'une application Angular) : `npm install -g @angular/cli`
+* Créer son premier projet : `ng new mon-premier-projet` puis s'y mettre avec `cd` et lancer la commande `ng serve` qui 
+va lancer le serveur de developpement (pour regarder comment ça avance en temps réel)
+
+* BOOTSTRAP : `npm install bootstrap --save` (le --save ajoute au package.json du projet)
+  * dans le fichier `angular.json` il faut maintenant ajouter Bootstrap à l'application, aller dans l'objet `architect` puis `styles`
+  et ajouter `./nodes_modules/bootstrap/dist/css/bootstrap.css",`
+
 
 ## Development server
 

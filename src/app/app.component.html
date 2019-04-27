@@ -11,14 +11,21 @@
     <div class="col-12">
       <h2> Mes appareils :</h2>
       <ul class="list-group">
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
+        <app-appareil appareilName="Machine à laver"></app-appareil>
+        <app-appareil appareilName="Télévision"></app-appareil>
+        <app-appareil appareilName="Ordinateur"></app-appareil>
       </ul>
-      <!-- [disabled]="isAuth" : ce boutton sera desactivé si la variable isAuth est false, si l'utilisateur est authéntifié il pourra dans ce cas tout allumer -->
-      <button class="btn btn-success"
-              [disabled]="!isAuth"
-              (click)="onAllumer()">Tout allumer</button>
+      <div>
+        <div class="row">
+          <div class="col-12">
+            <!-- [disabled]="isAuth" : ce boutton sera desactivé si la variable isAuth est false, si l'utilisateur est authéntifié il pourra dans ce cas tout allumer -->
+            <button class="btn btn-success"
+                    [disabled]="!isAuth"
+                    (click)="onAllumer()">Tout allumer</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>

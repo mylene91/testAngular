@@ -10,9 +10,24 @@ export class AppComponent {
   // title = 'premiers pas vers Angular !';
   // est-ce que l'utilisateur est authentifié ? Par défaut false
   isAuth =  false;
-  appareilOne = 'Machine à laver';
+  /*  appareilOne = 'Machine à laver';
   appareilTwo = 'Télévision';
-  appareilThree = 'Ordinateur';
+  appareilThree = 'Ordinateur';*/
+
+  appareils = [
+    {
+      name: 'Machine à laver',
+      status: 'éteint'
+    },
+    {
+      name: 'Télévision',
+      status: 'allumé'
+    },
+    {
+      name: 'Ordinateur',
+      status: 'éteint'
+    },
+  ];
 
   constructor() {
     setTimeout(

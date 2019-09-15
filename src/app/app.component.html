@@ -1,26 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <img width="300" alt="Angular Logo"
+       src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
 </div>
+
 
 <div class="container">
   <div class="row">
     <div class="col-12">
       <h2> Mes appareils :</h2>
+
+      <!--  promesse : async les données vont arriver : ex back-end pour éviter les bug | async pour les synchronicités  -->
+      <p> Mis à jour le : {{ lastUpdate | async | date: 'dd/MM/yyyy'| uppercase }}</p>
       <ul class="list-group">
         <!-- avec une boucle ou plutôt une directive structurelle *ngFor : je kiffe les boucles en Angular ! -->
         <app-appareil *ngFor="let appareil of appareils"
                       [appareilName]="appareil.name"
                       [appareilStatus]="appareil.status"
         ></app-appareil>
-        <!-- à l'ancienne :
-        <app-appareil [appareilName]="appareilOne" [appareilStatus]="'éteint'"></app-appareil>
-        <app-appareil [appareilName]="appareilTwo" [appareilStatus]="'allumé'"></app-appareil>
-        <app-appareil [appareilName]="appareilThree" [appareilStatus]="'allumé'"></app-appareil>
-        -->
+
       </ul>
       <div>
         <div class="row">
@@ -28,7 +26,13 @@
             <!-- [disabled]="isAuth" : ce boutton sera desactivé si la variable isAuth est false, si l'utilisateur est authéntifié il pourra dans ce cas tout allumer -->
             <button class="btn btn-success"
                     [disabled]="!isAuth"
-                    (click)="onAllumer()">Tout allumer</button>
+                    (click)="onAllumer()">Tout allumer
+            </button>
+
+            <button class="btn btn-danger"
+                    (click)="onEteindre()">Tout éteindre
+
+            </button>
           </div>
         </div>
       </div>
@@ -36,7 +40,6 @@
     </div>
   </div>
 </div>
-
 
 
 <router-outlet></router-outlet>
